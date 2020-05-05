@@ -8,16 +8,9 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
     {
         static void Main(string[] args)
         {
-            string[] animals = { "monkey", "bear", "rabbit", "wolf" };
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            var fourLetterAnimals = animals.Where(a => a.Length == 4);
-
-            foreach (string animal in fourLetterAnimals)
-            {
-                Console.WriteLine($"{animal} has 4 letters.");
-            }
-
-            Console.WriteLine($"There are {animals.Count(a => a.Length > 4)} animals with a length greater than 4");
+            // Plaats hier je code
 
             Console.ReadLine();
         }

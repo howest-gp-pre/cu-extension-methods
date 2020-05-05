@@ -6,11 +6,13 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
     {
         static void Main(string[] args)
         {
-            int i = 10;
-            int j = 100;
-            bool result = i.IsGreaterThan(j);
+            string[] emailAdresses = { "wrong|email@mistakes.be", "eddy.vedder@pearl.jam.be", "slash@gunsnroses.be", "rock-'n-roll@music.be" };
 
-            Console.WriteLine($"Is {i} greater than {j}? Answer is: {result}");
+            foreach (var emailAdress in emailAdresses)
+            {
+                Console.WriteLine($"{emailAdress} is{(emailAdress.IsValidEmailAddress() ? "" : "n't")} a valid emailadress");
+            }
+
             Console.ReadLine();
         }
     }

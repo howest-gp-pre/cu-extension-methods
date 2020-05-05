@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProgrammingExpert.ExtensionMethods.Cons
 {
@@ -7,21 +8,16 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
     {
         static void Main(string[] args)
         {
-            // string
             string[] animals = { "monkey", "bear", "rabbit", "wolf" };
 
-            if ("bear".In(animals))
-                Console.WriteLine($"Found a bear in animals!");
-            else
-                Console.WriteLine($"Found no bear");
+            var fourLetterAnimals = animals.Where(a => a.Length == 4);
 
-            // int
-            List<int> numbers = new List<int> { 1, 3, 6, 34, 65, 456, 343, 694 };
+            foreach (string animal in fourLetterAnimals)
+            {
+                Console.WriteLine($"{animal} has 4 letters.");
+            }
 
-            if (456.In(numbers))
-                Console.WriteLine($"Found 456 in numbers!");
-            else
-                Console.WriteLine($"Number 456 was not found!");
+            Console.WriteLine($"There are {animals.Count(a => a.Length > 4)} animals with a length greater than 4");
 
             Console.ReadLine();
         }

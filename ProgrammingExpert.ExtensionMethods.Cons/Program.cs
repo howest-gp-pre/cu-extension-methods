@@ -1,23 +1,6 @@
-﻿using System;
+﻿// See https://aka.ms/new-console-template for more information
 
-namespace ProgrammingExpert.ExtensionMethods.Cons
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(@" 
-    _______  _______________   _______ ________  _   __   __  _________________  ______  ____  _____
-   / ____/ |/ /_  __/ ____/ | / / ___//  _/ __ \/ | / /  /  |/  / ____/_  __/ / / / __ \/ __ \/ ___/
-  / __/  |   / / / / __/ /  |/ /\__ \ / // / / /  |/ /  / /|_/ / __/   / / / /_/ / / / / / / /\__ \ 
- / /___ /   | / / / /___/ /|  /___/ // // /_/ / /|  /  / /  / / /___  / / / __  / /_/ / /_/ /___/ / 
-/_____//_/|_|/_/ /_____/_/ |_//____/___/\____/_/ |_/  /_/  /_/_____/ /_/ /_/ /_/\____/_____//____/   ");
+using ProgrammingExpert.ExtensionMethods.Cons;
 
-            Console.WriteLine("\n\n===================================================================================");
-            Console.WriteLine("Check out the different branches in the solution for the examples");
-            Console.WriteLine("===================================================================================");
-            Console.ReadLine();
-
-        }
-    }
-}
+var app = new App();
+app.Run();

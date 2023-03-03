@@ -10,10 +10,11 @@ namespace ProgrammingExpert.ExtensionMethods
     {
         private static readonly Random _random = new Random();
 
-        public static int TakeRandom(this IEnumerable<int> enumerable)
+        public static T TakeRandom<T>(this IEnumerable<T> enumerable)
         {
             int randomIndex = _random.Next(enumerable.Count());
             return enumerable.ElementAt(randomIndex);
         }
+
     }
 }

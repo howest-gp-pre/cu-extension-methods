@@ -33,6 +33,11 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
                 .TakeRandom();
             Console.WriteLine($"Random number from list (skip first 2): {randomNumberSkipFirstTwo}");
 
+            // random string
+            string[] names = { "Alice", "Bob", "Carol", "Dave", "Eve" };
+            string randomName = names.TakeRandom();
+            Console.WriteLine($"Randomly chosen name: {randomName}");
+
             Console.ReadLine();
         }
     }

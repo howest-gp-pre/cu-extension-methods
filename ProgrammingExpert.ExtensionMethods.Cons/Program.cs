@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProgrammingExpert.ExtensionMethods.Cons
 {
@@ -22,6 +23,15 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
                 Console.WriteLine($"Found 456 in numbers!");
             else
                 Console.WriteLine($"Number 456 was not found!");
+
+            // random int
+            int randomNumber = numbers.TakeRandom();
+            Console.WriteLine($"Random number from list: {randomNumber}");
+
+            int randomNumberSkipFirstTwo = numbers
+                .Skip(2)
+                .TakeRandom();
+            Console.WriteLine($"Random number from list (skip first 2): {randomNumberSkipFirstTwo}");
 
             Console.ReadLine();
         }

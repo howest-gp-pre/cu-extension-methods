@@ -16,5 +16,18 @@ namespace ProgrammingExpert.ExtensionMethods
             return enumerable.ElementAt(randomIndex);
         }
 
+        public static IEnumerable<T> ElementsAtEvenPositions<T>(this IEnumerable<T> enumerable)
+        {
+            bool evenIndex = true;
+            foreach (T element in enumerable)
+            {
+                if (evenIndex)
+                {
+                    yield return element;
+                }
+                evenIndex = !evenIndex;
+            }
+        }
+
     }
 }

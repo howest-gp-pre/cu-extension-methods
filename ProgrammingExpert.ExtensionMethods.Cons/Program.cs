@@ -37,6 +37,45 @@ namespace ProgrammingExpert.ExtensionMethods.Cons
             string[] names = { "Alice", "Bob", "Carol", "Dave", "Eve" };
             string randomName = names.TakeRandom();
             Console.WriteLine($"Randomly chosen name: {randomName}");
+            Console.WriteLine();
+
+            // even positions
+            var numbersAtEvenPosition = numbers.ElementsAtEvenPositions();
+            Console.WriteLine("Numbers at even positions:");
+            Console.WriteLine("--------------------------");
+            foreach (int number in numbersAtEvenPosition)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine();
+
+            var namesAtEvenPosition = names.ElementsAtEvenPositions();
+            Console.WriteLine("Names at even positions:");
+            Console.WriteLine("------------------------");
+            foreach (string name in namesAtEvenPosition)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
+
+            // combined
+            string randomNameAtEvenPosition = names
+                .ElementsAtEvenPositions()
+                .TakeRandom();
+
+            Console.WriteLine("Random name at even position:");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine($"Result: {randomNameAtEvenPosition}");
+            Console.WriteLine();
+
+            int sumNumbersAtEvenPositionSkipFirstTwo = numbers
+                .Skip(2)
+                .ElementsAtEvenPositions()
+                .Sum();
+
+            Console.WriteLine("Sum of numbers at even position (skip first two):");
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine($"Result: {sumNumbersAtEvenPositionSkipFirstTwo}");
 
             Console.ReadLine();
         }
